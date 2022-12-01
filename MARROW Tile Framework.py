@@ -16,19 +16,16 @@ snowtile = "❅❅"
 pathtile = "░░"
 
 def forestpath():
+  zonerow1.clear(); zonerow2.clear(); zonerow3.clear(); zonerow4.clear(); zonerow5.clear();
   zonerow1.append(treetile); zonerow1.append(treetile); zonerow1.append(pathtile); zonerow1.append(treetile); zonerow1.append(treetile)
   zonerow2.append(treetile); zonerow2.append(treetile); zonerow2.append(pathtile); zonerow2.append(treetile); zonerow2.append(treetile)
   zonerow3.append(treetile); zonerow3.append(treetile); zonerow3.append(pathtile); zonerow3.append(treetile); zonerow3.append(treetile)
   zonerow4.append(treetile); zonerow4.append(treetile); zonerow4.append(pathtile); zonerow4.append(treetile); zonerow4.append(treetile)
   zonerow5.append(treetile); zonerow5.append(treetile); zonerow5.append(pathtile); zonerow5.append(treetile); zonerow5.append(treetile)
 
-pyc = 0
-pxc = 2
+forestpath()
 
 while 1==1:
-  zonerow1.clear(); zonerow2.clear(); zonerow3.clear(); zonerow4.clear(); zonerow5.clear();
-
-  forestpath()
   
   print(zonerow1[0] + zonerow1[1] + zonerow1[2] + zonerow1[3] + zonerow1[4])
   print(zonerow2[0] + zonerow2[1] + zonerow2[2] + zonerow2[3] + zonerow2[4])
@@ -38,11 +35,11 @@ while 1==1:
   
   action = input("Move/Act: ")
   if (action == "w"):
-    pyc = pyc + 1
+    pyc = pyc - 1
   elif (action == "a"):
     pxc = pxc - 1
   elif (action == "s"):
-    pyc = pyc - 1
+    pyc = pyc + 1
   elif (action == "d"):
     pxc = pxc + 1
   else:
@@ -53,15 +50,25 @@ while 1==1:
   if pyc == 0:
     forestpath()
     zonerow1.pop(pxc)
+    zonerow1.insert((int(pxc)), player)
   if pyc == 1:
     forestpath()
-    zonerow1.pop(pxc)
+    zonerow2.pop(pxc)
+    zonerow2.insert((int(pxc)), player)
   if pyc == 2:
     forestpath()
-    zonerow1.pop(pxc)
+    zonerow3.pop(pxc)
+    zonerow3.insert((int(pxc)), player)
   if pyc == 3:
     forestpath()
-    zonerow1.pop(pxc)
+    zonerow4.pop(pxc)
+    zonerow4.insert((int(pxc)), player)
   if pyc == 4:
     forestpath()
-    zonerow1.pop(pxc)
+    zonerow5.pop(pxc)
+    zonerow5.insert((int(pxc)), player)
+  # if pyc == 5:
+  #   forestpath()
+  #   zonerow5.pop(pxc)
+  #   zonerow5.insert((int(pxc - 1)), player)
+  #   pyc = pyc - 1
