@@ -3,6 +3,8 @@ The Dureann Framework Collection
 88 88Yb88  8I  Yb 88__    YbdP  
 88 88 Y88  8I  dY 88""    dPYb  
 88 88  Y8 8888Y"  888888 dP  Yb 
+Carrow Cile Cramework.cpp
+⬚⬚⬚⬚A translated version of the MARROW Tile Framework from the original python to c++.
 EXPUltimate.py
 ⬚⬚⬚⬚EXP Ultimate is an optimized version of the combined EXP, EXP+, and EXP+QRDTC programs.
 ⬚⬚⬚⬚This framework may be used freely, as long as proper credit is given to the listed creator.
